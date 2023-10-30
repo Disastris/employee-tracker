@@ -42,6 +42,26 @@ function queryInsertDepartment(departmentName) {
         console.table(result)
     });
 }
+inquirer
+    .prompt([{
+        message: "what would you like to do?",
+        type: "list",
+        choices: ["View all employees", "Add Employee","Update Employee Role", "View all roles", "Add role", "View all Departments", "Add Department"],
+        name: "response"
+    }
+    ])
+        .then((answer) => {
+            switch (answer.response){
+                case "Update Employee Role":
+                    console.log ("Update Employee Role");
+                    queryInsertDepartment();
+                    break;
+                    case "View all employees":
+                        console.log ("View all employees");
+                        break;
+                        default: console.log("Invalid");
+            }
+        });
 
 // For example, if inquirer has an option to View All Departments, and the user choses it
 // Then you'd call this function:
