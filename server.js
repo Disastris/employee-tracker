@@ -59,6 +59,20 @@ inquirer
                     case "View all employees":
                         console.log ("View all employees");
                         break;
+                        case "Add Employee":
+                            console.log("Add Employee");
+                            break;
+                            case "View all roles":
+                                console.log("View all roles");
+                                break;
+                                case "Add role":
+                                    console.log("Add role");
+                                    break;
+                                    case "View all departments":
+                                        console.log("View all departments");
+                                        break;
+                                        case "Add department":
+                                            console.log("Add department");
                         default: console.log("Invalid");
             }
         });
